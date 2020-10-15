@@ -2,11 +2,11 @@
 This repository is of simple python package to calculate bmi.
 
 
-## How to use
-1. Install the package using the below code and run in your enironment by refereing to below code.
+### How to use
+1. SDK : Install the package using the below code and run in your enironment by refereing to below code.
 
    ```
-   pip install https://www.github.com/bsnithin44/code-20201016-nithin/
+   pip install git+https://www.github.com/bsnithin44/code-20201016-nithin/
    ```
    ```
    from bmi import BmiCalculator
@@ -16,14 +16,15 @@ This repository is of simple python package to calculate bmi.
    bmi, bmi_category, risk = bmi_calculator.bmi(height = 170, weight = 60)
    ```
 
-2. Install the requirements in requirements.txt and the run the below commands.
+2. API : Install the requirements in requirements.txt and the run the below commands.
+
 
    ```
    python app.py
    ```
 
    ```
-   curl --location --request POST 'http://localhost:8000/bmi?bmi_category=Normal%20weight' \
+   curl --location --request POST 'http://localhost:8000/bmi?bmi_category=Overweight' \
    --header 'Content-Type: application/json' \
    --data-raw '[
        {
@@ -39,7 +40,18 @@ This repository is of simple python package to calculate bmi.
    ]'
    ```
 
-Run tests
+### Run tests
 ```
 python bmi_test.py
+```
+
+### Additional info
+```
+The BMI categories are :
+   "Normal weight"
+   "Overweight"
+   "Underweight"
+   "Moderately obese"
+   "Severely obese"
+   "Very severely obese"
 ```
